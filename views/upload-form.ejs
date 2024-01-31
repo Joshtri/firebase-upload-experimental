@@ -1,0 +1,30 @@
+<!-- views/upload-form.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Upload Form</title>
+</head>
+<body>
+  <h1>Upload Data</h1>
+  <form action="/test-upload" method="post" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+    <br>
+
+    <label for="file">File:</label>
+    <input type="file" id="file" name="file" accept=".jpg, .png" required>
+    <br>
+
+    <!-- Tambahkan input untuk atribut lainnya sesuai kebutuhan -->
+    
+    <button type="submit">Submit</button>
+  </form>
+</body>
+</html>

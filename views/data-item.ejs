@@ -1,0 +1,38 @@
+<!-- views/data-item.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Item</title>
+</head>
+
+<body>
+  <h1>Data Item</h1>
+  <table  border="5">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Action</th>
+    </tr>
+    <% items.forEach(item => { %>
+      <tr>
+        <td><%= item.id %></td>
+        <td><%= item.name %></td>
+        <td><%= item.description %></td>
+        <td><img src="<%= item.imageUrl %>" alt="Item Image" style="max-width: 100px;"></td>
+        <td>
+          <a href="/detail/<%= item.id %>">Detail</a> |
+          <a href="/edit/<%= item.id %>">Edit</a> |
+          <a href="/delete/<%= item.id %>">Delete</a>
+        </td>
+      </tr>
+    <% }); %>
+  </table>
+</body>
+
+</html>
