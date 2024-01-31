@@ -140,7 +140,7 @@ app.get('/get-images', async (req, res) => {
 });
 
 // Rute untuk menampilkan data dari koleksi Item
-app.get('/data-item', async (req, res) => {
+app.get('/', async (req, res) => {
     try {
         // Mendapatkan semua item dari MongoDB
         const items = await Item.find();
